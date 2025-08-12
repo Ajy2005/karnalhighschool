@@ -1,0 +1,179 @@
+/* --- 1. Basic Setup & Google Font Import --- */
+
+/* Import the Roboto font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Universal Reset for consistent styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes width/height calculations more intuitive */
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f3fa;
+}
+
+/* --- 2. Reusable Utility Classes --- */
+.width-100 {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px; /* Use max-width for responsiveness */
+    width: 95%;       /* Add padding on smaller screens */
+    margin: 0 auto;
+}
+
+/* --- 3. Top Header (Latest News) --- */
+.top-header {
+    background-color: #4a90e2;
+    padding: 8px 0;
+}
+
+/* Use Flexbox to align the "Latest News" label and the marquee */
+.top-header .width-100 {
+    display: flex;
+    align-items: center;
+}
+
+.news-list {
+    background: white;
+    color: red;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+.headquote {
+    color: white;
+    font-size: 16px;
+    flex-grow: 1; /* Allows the marquee to fill the remaining space */
+    width: auto; /* Overrides any fixed width */
+}
+
+/* --- 4. Main Header (Logo, Name, Menu) --- */
+.header-menu {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Use Flexbox to align the logo and school info side-by-side */
+.header-top-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adds space between the logo and the text */
+    margin-bottom: 15px; /* Space between the header content and the nav menu */
+}
+
+.logo img {
+    width: 100px; /* Correctly sized logo */
+    height: auto;
+}
+
+.school-name {
+    color: #555;
+    font-size: 1.1em;
+}
+
+.trust-name {
+    color: #d9534f; /* A nice red color for the main name */
+    font-size: 2em;
+}
+
+.school-address p {
+    color: #333;
+    font-size: 1em;
+}
+
+/* --- 5. Main Navigation Menu --- */
+.main-navigation {
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.main-menu {
+   list-style: none;
+   float: left;
+   margin-top: 5px;
+}
+
+.main-menu a {
+    font-weight: 500;
+    color: #3a3a3a;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.main-menu li{
+    float: left;
+    padding: 2px 5px;
+}
+
+.main-menu a:hover {
+    background-color: #4a90e2;
+    color: white;
+}
+
+
+/* --- 6. Slider Section --- */
+.slider-container {
+    width: 100%;
+    line-height: 0; /* Fixes a small gap that can appear under the image */
+}
+
+.slider {
+    width: 100%;
+    height: 350px;
+    max-height: 500px; /* Optional: prevent the slider from being too tall on large screens */
+}
+.margin-top-50 {
+    margin-top: 50px; /* Adds space between the header and the slider */
+}
+.width-33{
+width: 33%;
+float: left;
+}
+.latest-news{
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    padding: 15px;
+    height: 350px;
+    margin-bottom: 30px;
+
+}
+.heading-sect{
+width: 100%;
+float: left;
+border-bottom: 1px solid #cfcfcf;
+padding-bottom: 0px;
+margin: 0px;
+margin-bottom: 15px;
+padding-top: 2px;
+border: 1px solid #cfcfcf;
+padding: 15px;
+background: #00aed9;
+color: white;
+}
+.head-title{
+    margin : 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 5px;
+
+}
+.latest-news-ul{
+    padding: 0px;
+    list-style: none;
+    line-height: 40px;
+
+}
