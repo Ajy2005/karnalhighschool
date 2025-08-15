@@ -1,179 +1,567 @@
-/* --- 1. Basic Setup & Google Font Import --- */
-
-/* Import the Roboto font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-/* Universal Reset for consistent styling */
+/* --- 1. General & Global Styles --- */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Makes width/height calculations more intuitive */
+    box-sizing: border-box;
 }
 
-html, body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f3fa;
-}
-
-/* --- 2. Reusable Utility Classes --- */
-.width-100 {
-    width: 100%;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
 }
 
 .container {
-    max-width: 1200px; /* Use max-width for responsiveness */
-    width: 95%;       /* Add padding on smaller screens */
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
-/* --- 3. Top Header (Latest News) --- */
+/* Utility Classes */
+.width-100 { width: 100%; }
+.margin-top-50 { margin-top: 50px; }
+
+/* --- 2. Top Header --- */
 .top-header {
-    background-color: #4a90e2;
+    background-color: #d9534f; /* Red color */
+    color: white;
     padding: 8px 0;
 }
 
-/* Use Flexbox to align the "Latest News" label and the marquee */
-.top-header .width-100 {
-    display: flex;
-    align-items: center;
-}
-
 .news-list {
-    background: white;
-    color: red;
-    padding: 8px 15px;
-    font-size: 16px;
-    font-weight: 700;
-    white-space: nowrap; /* Prevents the text from wrapping */
+    font-weight: bold;
+    margin-right: 10px;
 }
 
 .headquote {
-    color: white;
-    font-size: 16px;
-    flex-grow: 1; /* Allows the marquee to fill the remaining space */
-    width: auto; /* Overrides any fixed width */
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 120px);
 }
 
-/* --- 4. Main Header (Logo, Name, Menu) --- */
+/* --- 3. Main Header --- */
 .header-menu {
-    background-color: white;
+    background: #fff;
     padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid #eee;
+    clear: both;
 }
 
-/* Use Flexbox to align the logo and school info side-by-side */
 .header-top-content {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Adds space between the logo and the text */
-    margin-bottom: 15px; /* Space between the header content and the nav menu */
+    display: flex
+;
+    /* align-items: start; */
+    text-align: left;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .logo img {
-    width: 100px; /* Correctly sized logo */
+    max-width: 250px;
     height: auto;
+    margin-right: 20px;
 }
 
 .school-name {
+    font-size: 1.2rem;
     color: #555;
-    font-size: 1.1em;
+    font-weight: 500;
 }
 
 .trust-name {
-    color: #d9534f; /* A nice red color for the main name */
-    font-size: 2em;
+    font-size: 2.2rem;
+    color: #d9534f;
+    font-weight: 700;
 }
 
-.school-address p {
-    color: #333;
-    font-size: 1em;
+.school-address {
+    font-size: 1rem;
+    color: #777;
 }
 
-/* --- 5. Main Navigation Menu --- */
 .main-navigation {
     width: 100%;
-    border-top: 1px solid #eee;
-    padding-top: 10px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .main-menu {
-   list-style: none;
-   float: left;
-   margin-top: 5px;
+    list-style: none;
+    text-align: center;
 }
 
-.main-menu a {
-    font-weight: 500;
-    color: #3a3a3a;
-    font-size: 18px;
-    text-decoration: none;
-    padding: 10px 15px;
+.main-menu li {
+    display: inline-block;
+}
+
+.main-menu li a {
     display: block;
-    border-radius: 4px;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
     transition: background-color 0.3s, color 0.3s;
 }
-.main-menu li{
-    float: left;
-    padding: 2px 5px;
-}
 
-.main-menu a:hover {
-    background-color: #4a90e2;
+.main-menu li a:hover, .main-menu li a.active {
+    background-color: #d9534f;
     color: white;
 }
 
-
-/* --- 6. Slider Section --- */
+/* --- 4. Slider / Hero Image Section --- */
 .slider-container {
-    width: 100%;
-    line-height: 0; /* Fixes a small gap that can appear under the image */
+    height: 450px;
+    overflow: hidden;
 }
-
 .slider {
     width: 100%;
-    height: 350px;
-    max-height: 500px; /* Optional: prevent the slider from being too tall on large screens */
+    height: 100%;
+    object-fit: cover;
 }
-.margin-top-50 {
-    margin-top: 50px; /* Adds space between the header and the slider */
-}
-.width-33{
-width: 33%;
-float: left;
-}
-.latest-news{
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: white;
-    padding: 15px;
-    height: 350px;
-    margin-bottom: 30px;
 
+/* --- 5. Main Content Area (Homepage) --- */
+.main-content-area {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
 }
-.heading-sect{
-width: 100%;
-float: left;
-border-bottom: 1px solid #cfcfcf;
-padding-bottom: 0px;
-margin: 0px;
-margin-bottom: 15px;
-padding-top: 2px;
-border: 1px solid #cfcfcf;
-padding: 15px;
-background: #00aed9;
-color: white;
+.main-content-left { flex: 2; }
+.main-content-right { flex: 1; }
+
+.heading-sect {
+    margin-bottom: 20px;
 }
-.head-title{
-    margin : 0px;
-    padding: 0px;
-    font-size: 16px;
-    font-weight: 600;
+
+.head-title {
+    font-size: 1.8rem;
+    color: #333;
+    border-bottom: 3px solid #4a90e2;
     padding-bottom: 5px;
-
+    display: inline-block;
 }
-.latest-news-ul{
-    padding: 0px;
-    list-style: none;
-    line-height: 40px;
 
+.welcome-section p {
+    text-align: justify;
+}
+
+.latest-news {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.news-marquee {
+    height: 250px;
+}
+
+.latest-news-ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.latest-news-ul li {
+    margin-bottom: 15px;
+}
+
+.latest-news-ul li a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.latest-news-ul li a:hover {
+    text-decoration: underline;
+}
+
+.latest-news-ul img {
+    height: 12px;
+    margin-left: 5px;
+}
+
+/* --- 6. Photo Gallery Section --- */
+.gallery-section {
+    clear: both;
+    padding-bottom: 50px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 2.5em;
+    color: #333;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-heading h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #4a90e2; /* Theme blue */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-item a {
+    text-decoration: none;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(217, 83, 79, 0.9); /* Theme red */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 1rem;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.gallery-item:hover .caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Gallery Preview Button (Homepage) */
+.gallery-preview-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-view-all {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-view-all:hover {
+    background-color: #357ebd;
+}
+
+/* --- 7. Footer Section --- */
+.footer-section {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 60px 0;
+    margin-top: 50px;
+    clear: both;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-widget .widget-title {
+    font-size: 1.3rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4a90e2; /* Theme blue */
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-widget p, .footer-widget li {
+    color: #bdc3c7;
+    line-height: 1.7;
+}
+
+.footer-widget a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-widget a:hover {
+    color: #ffffff;
+}
+
+.quick-links {
+    list-style: none;
+}
+
+.quick-links li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    background-color: #233140;
+    padding: 20px 0;
+    text-align: center;
+    clear: both;
+}
+
+.copyright-text {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+/* --- 8. Responsive Design --- */
+@media (max-width: 992px) {
+    .main-content-area {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-top-content {
+        flex-direction: column;
+    }
+    .logo img { margin-right: 0; margin-bottom: 15px; }
+    .trust-name { font-size: 1.8em; }
+
+    .main-navigation { text-align: center; }
+    .main-menu li { display: block; }
+    
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    .footer-widget .widget-title { display: inline-block; }
+    
+    .slider-container { height: 300px; }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+    .section-heading h2 { font-size: 2em; }
+    .main-menu li a { padding: 12px 15px; }
+}
+/* --- UPDATES FOR FOOTER SECTION --- */
+
+/* Change the footer grid to 4 columns on desktop */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Changed from 3 to 4 */
+    gap: 30px; /* Reduced gap slightly for better fit */
+}
+
+/* Style for the new school details list */
+.school-details-list {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+}
+
+.school-details-list li {
+    margin-bottom: 12px;
+    font-size: 0.9rem; /* Slightly smaller font for details */
+    color: #bdc3c7;
+    line-height: 1.5;
+}
+
+.school-details-list li strong {
+    color: #ecf0f1; /* Make the label slightly brighter */
+    display: block; /* Puts the value on a new line if needed */
+}
+
+
+/* --- RESPONSIVE UPDATES FOR NEW FOOTER GRID --- */
+
+/* On tablets, switch to a 2x2 grid */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* On mobile, stack all footer widgets into a single column */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-widget .widget-title {
+        display: inline-block;
+    }
+}
+/* --- 9. Video Gallery Section (NEW) --- */
+.video-section {
+    padding-bottom: 50px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.video-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.video-item a {
+    text-decoration: none;
+}
+
+.video-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.video-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(217, 83, 79, 0.9); /* Theme red */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 1rem;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.video-item:hover .caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Style for the play button icon */
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 70px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Allows clicks to go through to the link */
+}
+
+.video-item:hover .play-icon {
+    opacity: 1;
+}
+
+
+/* --- Responsive Update for Video Grid --- */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* --- 10. Video Popup / Modal Styles (NEW) --- */
+.video-popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Flexbox for centering */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Add this class with JS to show the popup */
+.video-popup.active {
+    display: flex;
+}
+
+.popup-content {
+    position: relative;
+    background-color: #000;
+    padding: 10px;
+    border: 2px solid #333;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+#popup-video {
+    width: 100%;
+    max-height: 80vh; /* Prevents video from being too tall */
+    display: block;
+}
+
+.close-button {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #d9534f; /* Theme red on hover */
+    text-decoration: none;
 }

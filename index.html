@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karnal HighSchool</title>
-    <link rel="stylesheet" href="Styles.css">
+    <title>Karnal HighSchool, Karnal - Home</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -23,10 +23,9 @@
     <!-- MAIN HEADER WITH LOGO, SCHOOL NAME, AND NAVIGATION -->
     <header class="width-100 header-menu">
         <div class="container">
-            <!-- Logo and School Details Wrapper -->
             <div class="header-top-content">
                 <div class="logo"> 
-                    <img src="logo.png" alt="Karnal High School Logo">
+                    <img src="images/logo2.jpg" alt="Karnal High School Logo">
                 </div>
                 <div class="school-info">
                     <h4 class="school-name">जवाहर शिक्षण संस्थेचे</h4>
@@ -34,15 +33,16 @@
                     <div class="school-address">
                         <p>कर्नाळ ता-मिरज, जिल्हा-सांगली</p>
                     </div>
-            <div>
+                </div>
+            </div>
             <!-- Main Navigation Menu -->
             <nav class="main-navigation">
                 <ul class="main-menu">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Admission</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Notice Book</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#">Notice Board</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </nav>
@@ -51,25 +51,108 @@
 
     <!-- SLIDER / HERO IMAGE SECTION -->
     <div class="width-100 slider-container">
-        <img class="slider" src="slider1.jpg" alt="Karnal High School building and grounds">
+        <img class="slider" src="images/slider1.jpeg" alt="Karnal High School building and grounds">
     </div>
-<div class="width-100 margin-top-50">
-<div class="container">
-<div class="width-33">
-<div class="letest-news">
-<div class="heading-sect">
-<h2 class="head-title">Latest News</h2>
-</div>
-<marquee direction="Up"
-<ul class="letest-news-ul">
-<li>Sample1</li><img src="new.gif" alt="new">
-<li>Sample1</li><img src="new.gif" alt="new">
-<li>Sample1</li><img src="new.gif" alt="new">
-<li>Sample1</li><img src="new.gif" alt="new">
-<li>Sample1</li><img src="new.gif" alt="new">
 
-</div>
+    <!-- MAIN CONTENT AREA -->
+    <div class="width-100 margin-top-50">
+        <div class="container main-content-area">
+            <div class="main-content-left">
+                <div class="welcome-section">
+                    <div class="heading-sect">
+                        <h2 class="head-title">Welcome to Karnal HighSchool</h2>
+                    </div>
+                    <p>Welcome to Karnal HighSchool, a place where young minds are nurtured and future leaders are made. Established with a vision to provide accessible and quality education, we are dedicated to the holistic development of our students. Our experienced faculty, comprehensive curriculum, and state-of-the-art facilities create an environment that encourages curiosity, critical thinking, and a lifelong love for learning. We believe in fostering not just academic excellence, but also strong moral and ethical values.</p>
+                </div>
+            </div>
+            <div class="main-content-right">
+                <div class="latest-news">
+                    <div class="heading-sect">
+                        <h2 class="head-title">Latest News</h2>
+                    </div>
+                    <marquee direction="up" behavior="scroll" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" class="news-marquee">
+                        <ul class="latest-news-ul">
+                            <li><a href="#">Annual Sports Day results declared.</a> <img src="images/new.gif" alt="new"></li>
+                            <li><a href="#">Admissions open for 2024-2025 batch.</a> <img src="images/new.gif" alt="new"></li>
+                            <li><a href="#">Science Fair exhibition on 20th Sept.</a> <img src="images/new.gif" alt="new"></li>
+                            <li><a href="#">Parent-Teacher meeting schedule released.</a></li>
+                            <li><a href="#">Holiday declared on account of Ganesh Chaturthi.</a></li>
+                            <li><a href="#">Inter-school debate competition winners announced.</a></li>
+                        </ul>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- PHOTO GALLERY PREVIEW SECTION -->
+    <div id="gallery-preview" class="width-100 margin-top-50 gallery-section">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Glimpses of Our School</h2>
+            </div>
+            <div class="gallery-grid">
+                <!-- Showing only the first 6 images as a preview, linking to the full gallery page -->
+                <div class="gallery-item"><a href="gallery.html"><img src="images/school-gate.jpg" alt="School Entrance"><div class="caption">School Entrance</div></a></div>
+                <div class="gallery-item"><a href="gallery.html"><img src="images/school-building-main.jpg" alt="Main Building"><div class="caption">Main Building</div></a></div>
+                <div class="gallery-item"><a href="gallery.html"><img src="images/playground.jpg" alt="Playground"><div class="caption">School Playground</div></a></div>
+                <div class="gallery-item"><a href="gallery.html"><img src="images/computer-lab-1.jpg" alt="Computer Lab"><div class="caption">Computer Lab</div></a></div>
+                <div class="gallery-item"><a href="gallery.html"><img src="images/assembly-hall-1.jpg" alt="Assembly Hall"><div class="caption">Assembly Hall</div></a></div>
+                <div class="gallery-item"><a href="gallery.html"><img src="images/students-courtyard.jpg" alt="Students in Courtyard"><div class="caption">Our Students</div></a></div>
+            </div>
+            <!-- Button to view the full gallery -->
+            <div class="gallery-preview-btn">
+                <a href="gallery.html" class="btn-view-all">View All Photos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="width-100 footer-section">
+        <div class="container">
+            <div class="footer-grid">
+    <!-- WIDGET 1: ABOUT -->
+    <div class="footer-widget">
+        <h3 class="widget-title">About Karnal HighSchool, Karnal</h3>
+        <p>Committed to providing quality education and fostering an environment of growth, knowledge, and discipline for the bright future of our students.</p>
+    </div>
+    
+    <!-- WIDGET 2: SCHOOL INFORMATION (NEW) -->
+    <div class="footer-widget">
+        <h3 class="widget-title">School Information</h3>
+        <ul class="school-details-list">
+            <li><strong>School Reg.No.:</strong> एस.एस.(एस.एस.एल) इन.एल/पीआर,पुणा - 4 दि. 21 एप्रिल 1964</li>
+            <li><strong>UDISE No.:</strong> 27350501703</li>
+            <li><strong>Medium:</strong> मराठी</li>
+            <li><strong>Board:</strong> MSBSHSE</li>
+            <li><strong>Index No.:</strong> 22.06.017</li>
+        </ul>
+    </div>
+    <!-- WIDGET 3: QUICK LINKS -->
+    <div class="footer-widget">
+        <h3 class="widget-title">Quick Links</h3>
+        <ul class="quick-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Admission</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#">Notice Board</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+                <div class="footer-widget">
+                    <h3 class="widget-title">Contact Us</h3>
+                    <p><strong>Address:</strong> <a href="https://share.google/JelLaE2gXrl7kujiD">Karnal HighSchool, Karnal, Tal-Miraj, Dist-Sangli, Maharashtra.</a> </p>
+                    <p><strong>Email:</strong> <a href="mailto:panditmore68@gmail.com">panditmore68@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+919022227102">+91 9022227102</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="width-100 footer-bottom">
+        <div class="container">
+            <p class="copyright-text">&copy; 2024 Karnal HighSchool, Karnal. All Rights Reserved.</p>
+        </div>
+    </div>
 </body>
 </html>
-
