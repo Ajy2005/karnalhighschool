@@ -512,8 +512,8 @@ body {
         grid-template-columns: 1fr;
     }
 }
-/* --- 10. Video Popup / Modal Styles (NEW) --- */
-.video-popup {
+/* --- 10. Generic Popup / Modal Styles (UPDATED) --- */
+.popup {
     display: none; /* Hidden by default */
     position: fixed;
     z-index: 1000;
@@ -528,40 +528,63 @@ body {
     justify-content: center;
 }
 
-/* Add this class with JS to show the popup */
-.video-popup.active {
+.popup.active {
     display: flex;
 }
 
-.popup-content {
+.popup .popup-content {
     position: relative;
-    background-color: #000;
+    background-color: #111;
     padding: 10px;
     border: 2px solid #333;
     width: 90%;
     max-width: 900px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease-in-out;
 }
 
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.popup .close-button {
+    position: absolute;
+    top: -45px;
+    right: -5px;
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.popup .close-button:hover,
+.popup .close-button:focus {
+    color: #d9534f;
+    transform: rotate(90deg);
+}
+
+/* --- Specific Styles for VIDEO Popup --- */
 #popup-video {
     width: 100%;
-    max-height: 80vh; /* Prevents video from being too tall */
+    max-height: 80vh;
     display: block;
 }
 
-.close-button {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
+/* --- Specific Styles for IMAGE Popup --- */
+#popup-image {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    display: block;
+    object-fit: contain; /* Prevents image from being cropped */
 }
 
-.close-button:hover,
-.close-button:focus {
-    color: #d9534f; /* Theme red on hover */
-    text-decoration: none;
+#popup-caption {
+    text-align: center;
+    color: #ccc;
+    padding: 15px 0 5px 0;
+    font-size: 1rem;
+    font-weight: 500;
 }
