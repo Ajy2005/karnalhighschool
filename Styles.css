@@ -588,3 +588,34 @@ body {
     font-size: 1rem;
     font-weight: 500;
 }
+/* --- 11. Policy Page Styles (NEW) --- */
+.policy-content {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.policy-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+}
+
+.policy-content h3:first-child {
+    margin-top: 0;
+}
+
+.policy-content p, .policy-content li {
+    line-height: 1.8;
+    color: #555;
+}
+
+.policy-content ul {
+    list-style-position: inside;
+    padding-left: 10px;
+}
